@@ -11,8 +11,8 @@ resource "aws_internet_gateway" "main-igw" {
 }
 
 ########### NAT ##############
-/* resource "aws_eip" "nat" {
-} */
+ resource "aws_eip" "nat" {
+} 
 
 resource "aws_nat_gateway" "main-natgw" {
   allocation_id = aws_eip.nat.id

@@ -20,14 +20,6 @@ resource "aws_security_group_rule" "outgoing_any" {
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
-resource "aws_security_group_rule" "incoming_ssh" {
-  security_group_id = "${aws_security_group.this.id}"
-  type              = "ingress"
-  from_port         = 22
-  to_port           = 22
-  protocol          = "tcp"
-  cidr_blocks       = ["0.0.0.0/0"]
-}
 
 # The rest of the security rules are opt-in
 
